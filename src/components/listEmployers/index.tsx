@@ -31,7 +31,6 @@ const  ListEmployers: React.FC<IProps> = (props) => {
       dispatch(actions.getPeople.request())
     }
 
-    console.log('loading ')
   }, [props.people])
 
   return (

@@ -38,7 +38,7 @@ const  StatusBtn: React.FC<IProps> = (props) =>{
 
   return (
         <div 
-          className={`list-item-status ${dataPerson.status !== CONSTANTS.APPROVED ? 'notapproved' : 'approved'} staustest`}
+          className={`list-item-status ${dataPerson.status !== CONSTANTS.APPROVED ? 'notapproved' : 'approved'}`}
           onClick={() => {setStatus()}}
         >
           {dataPerson.status !== CONSTANTS.APPROVED ? `NOT ${CONSTANTS.APPROVED}` : CONSTANTS.APPROVED}

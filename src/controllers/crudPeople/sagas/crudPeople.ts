@@ -22,13 +22,14 @@ import  { IPerson } from '../models';
 import * as ERROR_CONSTANTS from '../../../config/constants';
 
 export function*  getPeopleSagas({
-        payload,
 }: ReturnType<typeof actions.getPeople.request>) {
 
   try {
     yield put(setLoader({loader: true}))
 
     const res: IPerson[] = yield (UsersAPI.getPeopleList());
+    
+    console.log('res ', res)
     
     if (typeof res === 'object') {
         yield put(actions.getPeople.success(res))

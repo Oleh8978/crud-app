@@ -6,19 +6,19 @@ import * as actions from "./actions";
 // Interfaces
 import { ILoadersState } from "./models";
 
-export type FeeTypeSelector = ActionType<typeof actions>;
+export type LoaderTypeSelector = ActionType<typeof actions>;
 
 /* Reducer */
 const initialState: ILoadersState = {
-    errors: []
+    loaders: []
 };
 
-export const smallLoadersReducer = createReducer<ILoadersState, FeeTypeSelector>(
+export const smallLoadersReducer = createReducer<ILoadersState, LoaderTypeSelector>(
     initialState
 )
   .handleAction(actions.setNewLoader, (state, { payload }) => ({
-    errors: [...state.errors, payload]
+    loaders: [...state.loaders, payload]
 }))
 .handleAction(actions.removeLoader, (state, { payload }) => ({
-    errors: [...state.errors.filter(item => item.id !== payload.id)]
+    loaders: [...state.loaders.filter(item => item.id !== payload.id)]
 }))

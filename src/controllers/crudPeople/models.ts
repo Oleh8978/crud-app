@@ -3,9 +3,9 @@ export interface IPeopleState {
 }
 
 export interface IPerson {
+    id: number,
     name: string,
     avatar: string,
-    id: number,
     surname: string,
     status: string,
 }

@@ -3,5 +3,5 @@ export interface ISmallLoader {
 }
 
 export interface ILoadersState {
-    errors: ISmallLoader[]
+    loaders: ISmallLoader[]
 }

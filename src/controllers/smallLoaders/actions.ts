@@ -4,7 +4,7 @@ import {createAction } from "typesafe-actions";
 import { ISmallLoader } from "./models";
 
 /* Actions */
-export const widgetName = "ERROR_ADDER";
+export const widgetName = "LOADER_ADDER";
 
 export const setNewLoader = createAction(
     `${appName}/${widgetName}/SET_ERROR`

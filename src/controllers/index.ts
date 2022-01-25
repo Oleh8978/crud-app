@@ -5,14 +5,15 @@ import { combineReducers, Reducer } from "redux";
 import { loaderReducer } from "./loaderReducer";
 import { errorsReducer } from "./errorReducer";
 import { smallLoadersReducer } from './smallLoaders';
-import { crudReducer } from './crudPeople';
+import { newUserReducer } from './newEmployerReducer';
+import { crudReducer, crudSagas } from './crudPeople';
 
 // interfaces 
 import { IStore } from "./interfaces";
 
 export const rootSaga = function* () {
   yield all([
-
+    crudSagas()
   ]);
 };
 
@@ -22,4 +23,5 @@ export const rootReducer = (): Reducer =>
     errors: errorsReducer,
     smallLoader: smallLoadersReducer,
     people: crudReducer,
+    newPerson: newUserReducer
   });

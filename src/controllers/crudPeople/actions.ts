@@ -11,7 +11,7 @@ export const getPeople = createAsyncAction(
   `${appName}/${widgetName}/GET_REQUEST`,
   `${appName}/${widgetName}/GET_SUCCESS`,
   `${appName}/${widgetName}/GET_FAILED`
-)<null, IPerson[], string>();
+)<undefined, IPerson[], string>();
 
 export const addPeople = createAsyncAction(
   `${appName}/${widgetName}/POST_REQUEST`,

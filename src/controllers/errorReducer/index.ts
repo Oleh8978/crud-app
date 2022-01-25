@@ -6,14 +6,14 @@ import * as actions from "./action";
 // Interfaces
 import { IErrorsState } from "./models";
 
-export type FeeTypeSelector = ActionType<typeof actions>;
+export type ErrorTypeSelector = ActionType<typeof actions>;
 
 /* Reducer */
 const initialState: IErrorsState = {
     errors: []
 };
 
-export const errorsReducer = createReducer<IErrorsState, FeeTypeSelector>(
+export const errorsReducer = createReducer<IErrorsState, ErrorTypeSelector>(
     initialState
 )
   .handleAction(actions.setNewError, (state, { payload }) => ({

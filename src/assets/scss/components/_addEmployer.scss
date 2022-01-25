@@ -1,0 +1,47 @@
+.add {
+
+    &-employer {
+        @extend .list-item;
+        height: 100px;
+
+        @media screen and (max-width: 650px) {
+            height: 200px;
+        }
+
+        &-names {
+            &-holder {
+                @media screen and (max-width: 650px) {
+                    margin-left: 0px;
+                    margin-right: auto;
+                }
+                display: flex;
+                flex-flow: column;
+            }
+        }
+    }
+}
+
+.input {
+
+    &-holder {
+        border: 0px;
+        margin-top: 5px;
+        margin-left: auto;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    &-txt {
+        margin-top: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+input:focus{
+    outline: none;
+}
